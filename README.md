@@ -13,5 +13,5 @@ npm install -g browserify
 ```
 yarn start
 ```
-Available at [http://localhost:8080/](http://localhost:8080/).
+Available at [http://localhost:8080/](http://localhost:8080/)
 
