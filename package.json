@@ -13,11 +13,13 @@
   "bugs": {
     "url": "https://github.com/katrynmc/three-experiments/issues"
   },
+  "license": "MIT",
   "keywords": [
     "threejs",
     "art"
   ],
   "dependencies": {
+    "normalize.css": "^7.0.0",
     "three": "^0.85.2"
   }
 }
