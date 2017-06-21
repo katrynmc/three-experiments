@@ -16,5 +16,8 @@
   "keywords": [
     "threejs",
     "art"
-  ]
+  ],
+  "dependencies": {
+    "three": "^0.85.2"
+  }
 }
