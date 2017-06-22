@@ -1,4 +1,5 @@
 const THREE = require('three');
+// https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 55, window.innerWidth/window.innerHeight, 0.1, 1000 );
