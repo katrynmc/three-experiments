@@ -1,28 +1,36 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 const THREE = require('three');
+// https://threejs.org/docs/index.html#manual/introduction/Drawing-lines
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 55, window.innerWidth/window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
-
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh( geometry, material );
+const camera = new THREE.PerspectiveCamera(
+  45,
+  window.innerWidth/window.innerHeight,
+  1,
+  500
+);
+camera.position.set(0, 0, 100);
+camera.lookAt(new THREE.Vector3(0, 0, 0));
 
-scene.add( cube );
-camera.position.z = 5;
+const scene = new THREE.Scene();
 
-const render = function render() {
-  requestAnimationFrame( render );
-  cube.rotation.x += 0.051;
-  cube.rotation.y += 0.051;
-  renderer.render( scene, camera );
-}
+const material = new THREE.LineBasicMaterial({ color: 0x0000ff });
 
-render();
+// it's recommended to use a BufferGeometry as it's more performant, however for simplicity we'll use a Geometry here
+
+const geometry = new THREE.Geometry();
+geometry.vertices.push(new THREE.Vector3(-10, 0, 0));
+geometry.vertices.push(new THREE.Vector3(0, 10, 0));
+geometry.vertices.push(new THREE.Vector3(10, 0, 0));
+
+const line = new THREE.Line(geometry, material);
+
+scene.add(line);
+
+renderer.render(scene, camera);
 
 },{"three":2}],2:[function(require,module,exports){
 (function (global, factory) {

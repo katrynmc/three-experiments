@@ -4,7 +4,7 @@
   "description": "A bunch of random trials of Three JS, learning sandbox",
   "author": "Katryn McIntosh <katryn.mcintosh@gmail.com>",
   "scripts": {
-    "start": "browserify js/main.js --outfile build/main.js && http-server"
+    "start": "browserify js/tutorial_drawing-lines.js --outfile build/main.js && http-server"
   },
   "repository": {
     "type": "git",
