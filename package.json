@@ -19,7 +19,7 @@
     "art"
   ],
   "dependencies": {
-    "normalize.css": "^7.0.0",
-    "three": "^0.85.2"
+    "normalize.css": "^8.0.0",
+    "three": "^0.93.0"
   }
 }
