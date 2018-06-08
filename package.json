@@ -4,7 +4,7 @@
   "description": "A bunch of random trials of Three JS, learning sandbox",
   "author": "Katryn McIntosh <katryn.mcintosh@gmail.com>",
   "scripts": {
-    "start": "browserify js/tutorial_rachsmith_pt2.js --outfile build/main.js && http-server"
+    "start": "browserify js/tutorials/tutorial_rachsmith_pt2.js --outfile build/main.js && http-server"
   },
   "repository": {
     "type": "git",
