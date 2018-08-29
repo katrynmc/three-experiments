@@ -1,4 +1,4 @@
-const THREE = require('three');
+const THREE = require("three");
 // https://threejs.org/docs/index.html#manual/introduction/Drawing-lines
 
 const renderer = new THREE.WebGLRenderer();
@@ -7,7 +7,7 @@ document.body.appendChild(renderer.domElement);
 
 const camera = new THREE.PerspectiveCamera(
   45,
-  window.innerWidth/window.innerHeight,
+  window.innerWidth / window.innerHeight,
   1,
   500
 );
