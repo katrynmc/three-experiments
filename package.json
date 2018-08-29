@@ -4,7 +4,8 @@
   "description": "A bunch of random trials of Three JS, learning sandbox",
   "author": "Katryn McIntosh <katryn.mcintosh@gmail.com>",
   "scripts": {
-    "start": "browserify js/tutorials/tutorial_rachsmith_pt2.js --outfile build/main.js && http-server"
+    "start": "browserify js/tutorials/tutorial_rachsmith_pt2.js --outfile build/main.js && http-server",
+    "pretty": "prettier --write 'js/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   ],
   "dependencies": {
     "normalize.css": "^8.0.0",
+    "prettier": "^1.14.2",
     "three": "^0.95.0"
   }
 }
