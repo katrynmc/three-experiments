@@ -20,6 +20,6 @@
   ],
   "dependencies": {
     "normalize.css": "^8.0.0",
-    "three": "^0.93.0"
+    "three": "^0.95.0"
   }
 }
